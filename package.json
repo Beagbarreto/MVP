@@ -18,7 +18,10 @@
   "homepage": "https://github.com/Beagbarreto/MVP#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "jquery": "^3.3.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   },
   "devDependencies": {
     "nodemon": "^1.14.12",
