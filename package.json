@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Beagbarreto/MVP#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "bootstrap": "^4.0.0",
     "express": "^4.16.2",
     "jquery": "^3.3.1",
     "react": "^16.2.0",

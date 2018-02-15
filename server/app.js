@@ -1,13 +1,13 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-//var database = require('/');
+//var database = require('./database');
 var app = express();
 
 //midleware goes here
 app.use(bodyParser.json());
 
 app.get('/', function(req, res){
-  res.send("I've created a monster");
+  res.render('index');
 });
 
 app.listen(3000, function(){
