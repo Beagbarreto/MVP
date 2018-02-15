@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "react-dev": "webpack -d --watch",
+    "server-dev": "nodemon server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,7 +23,8 @@
     "express": "^4.16.2",
     "jquery": "^3.3.1",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "mongoose": "^4.8.6"
   },
   "devDependencies": {
     "nodemon": "^1.14.12",
