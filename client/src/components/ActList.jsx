@@ -1,14 +1,10 @@
 import React from 'react';
-import EventListEntry from './EventListEntry.jsx';
+import ActListEntry from './ActListEntry.jsx';
 
-const EventList = (props) => (
-  <div>
-    props.act.map
+const ActList = (props) => (
+  <div>/*can add a clas for css in this div */
+    {props.act.map(act => ActListEntry act={act} key={act.id}/>)
     key={act.id}
-
-
   </div>
 )
-
-
 export default EventList;
