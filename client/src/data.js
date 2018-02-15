@@ -1,22 +1,22 @@
 window.data = [{
     date: "01/16/18"
-    event name: "Chinese New Year"
-    time: 9:00 pm
+    title: "Chinese New Year"
+    time: 21:00
     where: "Asian Green Cuisine"
     description: "Dumplings bring abundance for Lunar Year",
   },
   {
     date: "01/17/18"
-    event name: "Black Panther Movie"
-    time: 7:45 pm
+    title: "Black Panther Movie"
+    time: 19:45
     where: "WTC movie theater"
     description: "New Marvel movie",
   },
   {
-  date: "01/24/18"
-  event name: "Thai Dinner"
-  time: 8:00 pm
-  where: "123 Thai food"
-  description: "Wan to try Tom Dalai soup",
+    date: "01/24/18"
+    title: "Thai Dinner"
+    time: 20:00
+    where: "123 Thai food"
+    description: "Wan to try Tom Dalai soup",
   }
 ]
