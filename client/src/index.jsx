@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import $ from 'jquery';
+import $ from 'jquery';
 import data from './data.js';
 import AddEvent from './components/AddEvent.jsx'
 import ActList from './components/ActList.jsx';
@@ -11,12 +11,13 @@ class App extends React.Component{
     this.state = {
       act: []
     }
+    this.getActivities = this.getActivities.bind(this);
   }
 
   updateCalender(){
     $.ajax({
       method: "POST",
-      url:"/calender",
+      url:"/activities",
       contentType:'application/json',
       data: JSON.stringify({
         day: day,
@@ -29,10 +30,28 @@ class App extends React.Component{
       this.setState({list: actList});
     })
   }
+  getActivities() {
+    $.ajax({
+      url: '/activities',
+      method: 'GET',
+      success: (results) => {
+        this.setState({list: results});
+      },
+      error: (xhr, err) => {
+        console.log('err', err);
+      }
+    })
+  }
+
+  componentDidMount() {
+    this.getactivities();
+  }
+
   render(){
     return(<div>
-      <h1>Calender</h1>
-      <AddEvent act={this.state.act}/>
+      <h1>Activities List</h1>
+      <AddEvent addAct={this.state.act}/>
+      <ActList list={this.state.list}/>
     </div>)
   }
 }
