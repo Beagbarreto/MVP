@@ -3,19 +3,19 @@ import React from 'react';
 class AddEvent extends React.Component{
   constructor(props){
     super(props);
-    this.setState = {
+    this.state = {
       day: '',
       title: '',
-      time: '',
-      where: '',
+      hour: '',
+      location: '',
       description: ''
     }
-    this.handleday = this.handleDay.bind(this)
+    this.handleDay = this.handleDay.bind(this)
     this.handleTitle = this.handleTitle.bind(this)
-    this.handleTime = this.handleTime.bind(this)
-    this.handleWehre = this.handleWhere.bind(this)
+    this.handleHour = this.handleHour.bind(this)
+    this.handlelocation = this.handlelocation.bind(this)
     this.handleDescription = this.handleDescription.bind(this)
-    this.addToCalender = this.addToCalender.bind(this)
+    this.addAct = this.addAct.bind(this)
   }
     handleDay(event){
       this.setState({
@@ -27,14 +27,14 @@ class AddEvent extends React.Component{
         title: event.target.value
       })
     }
-    handleTime(event){
+    handleHour(event){
       this.setState({
-        time: event.target.value
+        hour: event.target.value
       })
     }
-    handleWhere(event){
+    handlelocation(event){
       this.setState({
-        where: event.target.value
+        location: event.target.value
       })
     }
     handleDescription(event){
@@ -43,13 +43,13 @@ class AddEvent extends React.Component{
       })
     }
 
-    addToCalender(){
-      this.props.addToCalenderAct(this.state.date, this.state.title, this.state.time, this.state.where, this.stte.description);
+    addAct(){
+      this.props.addEventAct(this.state.date, this.state.title, this.state.hour, this.state.location, this.stte.description);
       this.setState = {
         day: '',
         title: '',
-        time: '',
-        where: '',
+        hour: '',
+        location: '',
         description: ''
       }
     }
@@ -60,12 +60,13 @@ class AddEvent extends React.Component{
       <br />
         title: <input value={this.state.title} onChange={this.handleTitle}></input>
       <br />
-        time: <input value={this.state.time} onChange={this.handleTime}></input>
+        hour: <input value={this.state.hour} onChange={this.handleHour}></input>
       <br />
-        where: <input value={this.state.where} onChange={this.handleWhere}></input>
+        location: <input value={this.state.location} onChange={this.handlelocation}></input>
       <br />
         description: <input value={this.state.description} onChange={this.handleDescription}></input>
-      <button onClick={this.addToCalender}>Add to Calender</button>
+      <br />
+      <button onClick={this.addEvent}>Add to Calender</button>
 
       </div>)
     }

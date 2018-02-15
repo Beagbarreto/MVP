@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 //import $ from 'jquery';
 import data from './data.js';
-import AddEvent from './components/AddToCalender.jsx'
+import AddEvent from './components/AddEvent.jsx'
 import ActList from './components/ActList.jsx';
 
 class App extends React.Component{
@@ -13,15 +13,15 @@ class App extends React.Component{
     }
   }
 
-  componentDidMount(){
+  updateCalender(){
     $.ajax({
       method: "POST",
       url:"/calender",
       contentType:'application/json',
       data: JSON.stringify({
-        date: date,
+        day: day,
         title: title,
-        time: time,
+        hour: hour,
         where: where,
         description: description
       })

@@ -6,7 +6,7 @@ const ActListEntry = (props) => (
     <span> {props.act.title} </span>
     <span> {props.act.time} </span>
   </div>
-/*  <div  onClick={()=>{}}
+/*  <div  onClick={()=>{showDetails(link to database here)}}
    >
    //click will display details of event
    //if there are no events always shows message no upcoming events
