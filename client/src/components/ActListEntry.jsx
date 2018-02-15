@@ -1,28 +1,19 @@
 import React from 'react';
 
-const EventListEntry = (props) => (
+const ActListEntry = (props) => (
   <div>
-    <span> {props.act.date} </span>
-    <span> {props.act.eventName} </span>
+    <span> {props.act.day} </span>
+    <span> {props.act.title} </span>
     <span> {props.act.time} </span>
-    <span> {props.act.where} </span>
   </div>
-  <div  onClick={()=>{}}
+/*  <div  onClick={()=>{}}
    >
+   //click will display details of event
+   //if there are no events always shows message no upcoming events
+   //if event is not clicked will show details of first event on the list
+   //button needs event handler
+   //onClick={this.Details}
   </div>
-)
+*/)
 
-
-export default EventListEntry;
-
-/*
-<div>
-      Description: <input value={this.state.description} onChange={this.handleDescription}></input>
-      <br />
-      Quantity: <input value={this.state.quantity} onChange={this.handleQuantity}></input>
-    {button needs an event handler, an onClick to do something}
-    <button onClick={this.addItem}>Add Grocery</button>
-    </div>);
-  }
-}
-*/
+export default ActListEntry;

@@ -3,8 +3,7 @@ import ActListEntry from './ActListEntry.jsx';
 
 const ActList = (props) => (
   <div>/*can add a clas for css in this div */
-    {props.act.map(act => ActListEntry act={act} key={act.id}/>)
-    key={act.id}
+    {props.act.map((act) => <ActListEntry act={act} key={act.id}/>)}
   </div>
 )
-export default EventList;
+export default ActList;

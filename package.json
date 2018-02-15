@@ -2,10 +2,9 @@
   "name": "calender",
   "version": "1.0.0",
   "description": "group event calender",
-  "main": "app.js",
   "scripts": {
     "react-dev": "webpack -d --watch",
-    "server-dev": "nodemon server/index.js",
+    "start": "nodemon server/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,9 +21,9 @@
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "jquery": "^3.3.1",
+    "mongoose": "^4.13.11",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "mongoose": "^4.8.6"
+    "react-dom": "^16.2.0"
   },
   "devDependencies": {
     "nodemon": "^1.14.12",
