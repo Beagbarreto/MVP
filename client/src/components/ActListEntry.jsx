@@ -4,7 +4,7 @@ const ActListEntry = (props) => (
   <div>
     <span> {props.act.day} </span>
     <span> {props.act.title} </span>
-    <span> {props.act.time} </span>
+    <span> {props.act.hour} </span>
   </div>
 /*  <div  onClick={()=>{showDetails(link to database here)}}
    >

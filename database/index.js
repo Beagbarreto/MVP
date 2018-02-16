@@ -1,10 +1,9 @@
 var mysql = require('mysql');
-var password = require('../passwords.js');
 
 var con = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: password.mysqlPassword,
+  password: "",
   database: "review"
 });
 
@@ -19,7 +18,7 @@ var selectAll = function(cb) {
 };
 
 var insertOne = function(day, title, hour, location, description, cb) {
-  con.query('INSERT INTO activities (day, title, hour, location, description) VALUES (?, ?)',
+  con.query('INSERT INTO activities (day, title, hour, location, description) VALUES (?, ?, ?, ?, ?)',
     [day, title, hour, location, description], (err, results, fields) => {
       if(err) {
         cb(err, null);

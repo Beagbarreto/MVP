@@ -13,9 +13,9 @@ class AddEvent extends React.Component{
     this.handleDay = this.handleDay.bind(this)
     this.handleTitle = this.handleTitle.bind(this)
     this.handleHour = this.handleHour.bind(this)
-    this.handlelocation = this.handlelocation.bind(this)
+    this.handleLocation = this.handleLocation.bind(this)
     this.handleDescription = this.handleDescription.bind(this)
-    this.addAct = this.addAct.bind(this)
+    this.addEvent = this.addEvent.bind(this)
   }
     handleDay(event){
       this.setState({
@@ -32,7 +32,7 @@ class AddEvent extends React.Component{
         hour: event.target.value
       })
     }
-    handlelocation(event){
+    handleLocation(event){
       this.setState({
         location: event.target.value
       })
@@ -43,8 +43,8 @@ class AddEvent extends React.Component{
       })
     }
 
-    addAct(){
-      this.props.addEventAct(this.state.date, this.state.title, this.state.hour, this.state.location, this.stte.description);
+    addEvent(){
+      this.props.addEventAct(this.state.date, this.state.title, this.state.hour, this.state.location, this.state.description);
       this.setState = {
         day: '',
         title: '',
@@ -62,11 +62,11 @@ class AddEvent extends React.Component{
       <br />
         hour: <input value={this.state.hour} onChange={this.handleHour}></input>
       <br />
-        location: <input value={this.state.location} onChange={this.handlelocation}></input>
+        location: <input value={this.state.location} onChange={this.handleLocation}></input>
       <br />
         description: <input value={this.state.description} onChange={this.handleDescription}></input>
       <br />
-      <button onClick={this.addEvent}>Add to Calender</button>
+      <button onClick={this.addEvent}>Calender</button>
 
       </div>)
     }

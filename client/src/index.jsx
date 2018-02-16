@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import $ from 'jquery';
+//import $ from 'jquery';
 import data from './data.js';
 import AddEvent from './components/AddEvent.jsx'
 import ActList from './components/ActList.jsx';
@@ -11,10 +11,11 @@ class App extends React.Component{
     this.state = {
       act: []
     }
+ this.updateCalender = this.updateCalender.bind(this);
     this.getActivities = this.getActivities.bind(this);
   }
 
-  updateCalender(){
+  updateCalender(day, title, hour, where, description){
     $.ajax({
       method: "POST",
       url:"/activities",
@@ -26,10 +27,11 @@ class App extends React.Component{
         where: where,
         description: description
       })
-    }).done(({actList})=> {
-      this.setState({list: actList});
+    }).done((results)=> {
+      this.setState({list: results});//Activities
     })
   }
+
   getActivities() {
     $.ajax({
       url: '/activities',
